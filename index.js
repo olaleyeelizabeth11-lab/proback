@@ -9,7 +9,9 @@ const applicationRoutes = require('./routes/application.route')
 dotenv.config();
 
 app.set("view engine", "ejs")
-app.use(cors());
+app.use(cors({origin: 'https://proback-ops7.onrender.com', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
