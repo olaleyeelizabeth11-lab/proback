@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
 const mongoose = require('mongoose')
 const userRoute = require('./routes/user.route')
 const jobRoutes = require('./routes/job.route');
@@ -9,7 +9,8 @@ const applicationRoutes = require('./routes/application.route')
 dotenv.config();
 
 app.set("view engine", "ejs")
-app.use(cors({origin: 'https://proback-ops7.onrender.com', 
+app.use(cors({origin: 'http://localhost:5174', 
+// app.use(cors({origin: 'https://proback-ops7.onrender.com', 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true}));
 app.use(express.json());
