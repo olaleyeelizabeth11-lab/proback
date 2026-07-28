@@ -55,6 +55,17 @@ const customerSchema = mongoose.Schema({
         default: "" 
     },
 
+
+    googleId:  { type: String, default: "" },
+    githubId:  { type: String, default: "" },
+
+    bio:       { type: String, default: "" },
+    phone:     { type: String, default: "" },
+    location:  { type: String, default: "" },
+    skills:    { type: [String], default: [] },
+    photoUrl:  { type: String, default: "" },
+    resumeUrl: { type: String, default: "" },
+
 }, { timestamps: true });
 
 // Export the model
