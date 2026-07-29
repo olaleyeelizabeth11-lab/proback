@@ -54,7 +54,7 @@ app.use('/user', require('./routes/user.route'));
 app.use('/applications', require('./routes/application.route'));
 // app.use('/jobs', require('./routes/job.route'));
 app.use('/jobs', jobRoutes);
-app.use('/auth',         require('./routes/auth.route'));
+app.use('/auth', require('./routes/auth.route'));
 
 app.listen(port, ()=> {
     console.log(`I am runnng on port ${port}`)
