@@ -9,6 +9,7 @@ const session      = require('express-session');
 const passport     = require('./config/passport');
 const jobRoutes = require('./routes/job.route');
 const applicationRoutes = require('./routes/application.route')
+const authRoutes   = require('./routes/auth.route');
 
 
 app.set("view engine", "ejs")
@@ -52,8 +53,8 @@ app.post('/test', (req, res) => {
 
 app.use('/user', require('./routes/user.route'));
 app.use('/applications', require('./routes/application.route'));
-
 app.use('/jobs', jobRoutes);
+// app.use('/auth', require('./routes/auth.route'));
 app.use('/auth', require('./routes/auth.route'));
 
 app.listen(port, ()=> {
